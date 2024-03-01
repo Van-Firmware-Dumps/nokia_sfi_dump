@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<operator_list version="1">
+    <!-- HOPERUN_PATCH_BEGIN -->
+    <!-- 2022-4-28:caoyukun:MGK-2241:DUT shows multiple times the Operator PLMN available during a MPLMN search -->
+    <operator simOperator="334050"  networkPlmn="33403" displayName="AT&amp;T EX" />
+    <operator simOperator="33405"   networkPlmn="33403" displayName="AT&amp;T EX" />
+    <operator simOperator="334090"  networkPlmn="33403" displayName="AT&amp;T EX" />
+    <!-- HOPERUN_PATCH_END -->
+
+    <!-- 2022.10.25:liuying SCP-6611:CLONE - A12 [ITA][Wind3] Wrong display of the network name NW begin -->
+    <!-- HOPERUN_PATCH_BEGIN -->
+    <!-- 2022-3-21:caoyukun:MGK-551:[MASP]Vodafone AU R should show in network search list, instead of Optus -->
+    <operator simOperator="50503"  simspn="Vodafone AU" networkPlmn="50502" displayName="Vodafone AU R" />
+    <operator simOperator="50506"  simspn="Vodafone AU" networkPlmn="50502" displayName="Vodafone AU R" />
+    <!-- HOPERUN_PATCH_END -->
+    <operator simOperator="50503"  simspn="Lebara" networkPlmn="50501" displayName="Telstra Mobile" />
+    <operator simOperator="50503"  simspn="Lebara" networkPlmn="50502" displayName="Roaming" />
+    <operator simOperator="22288"  networkPlmn="22299" displayName="22299" />
+    <operator simOperator="22299"  networkPlmn="22288" displayName="WINDTRE" />
+    <operator simOperator="22299"  networkPlmn="22299" displayName="WINDTRE" />
+    <!-- 2022.10.25:liuying SCP-6611:CLONE - A12 [ITA][Wind3] Wrong display of the network name NW end -->
+
+    <!-- 2022.8.29:huanglei SCP-4904 [Sky UK] manual network scan shows "Virgin mobile" NW begin -->
+    <operator simOperator="23457"  networkPlmn="23432" showName="false" />
+    <!-- 2022.8.29:huanglei SCP-4904 [Sky UK] manual network scan shows "Virgin mobile" NW end -->
+</operator_list>

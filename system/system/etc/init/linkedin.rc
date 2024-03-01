@@ -1,0 +1,3 @@
+on post-fs-data
+    setprop ro.linkedin.channel "HMD Global_PRELOAD"
+

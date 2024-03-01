@@ -1,0 +1,17 @@
+#add by hao.huang@hmdglobal.com for fastboot and factoryreset time flag begin
+service vendor.fastboot.switch /system/bin/oemowninfo
+    class main
+    user system
+    group system
+    disabled
+    oneshot
+
+on property:persist.sys.hmd.block_downloadmode=0
+    start vendor.fastboot.switch
+
+on property:persist.sys.hmd.block_downloadmode=1
+    start vendor.fastboot.switch
+
+on property:sys.hmd.factoryreset_time_flag=1
+    start vendor.fastboot.switch
+#add by hao.huang@hmdglobal.com for fastboot and factoryreset time flag end
