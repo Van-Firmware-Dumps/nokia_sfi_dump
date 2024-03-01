@@ -1,0 +1,56 @@
+on cali
+    mount_all /vendor/etc/fstab.cali
+    mount tmpfs tmpfs /data mode=0777
+
+    mkdir /elabel 0771 root system
+    mount ext4 /dev/block/by-name/elabel /elabel noatime nosuid nodev barrier=1
+    mount ext4 /dev/block/by-name/elabel /elabel noatime nosuid nodev barrier=1 ro
+
+    trigger load_persist_props_action
+
+    setprop sys.usb.configfs 1
+
+    wait_for_prop vendor.all.modules.ready 1
+    trigger cali-fs
+    trigger cali-start
+
+on cali-fs
+    chmod 0775 /mnt/vendor
+    chown system system /mnt/vendor
+    chmod 0771 /data
+
+    mkdir /data/vendor 0751 root root
+    mkdir /data/vendor/local 0751 root root
+    mkdir /data/vendor/local/media 0770 audioserver system
+
+    mkdir /data/vendor/local/mlogservice 0770 shell system
+
+    chmod 0660 /sys/power/wakeup_count
+
+#factory
+    chown root system /dev/block/by-name/factory
+    chmod 0660 /dev/block/by-name/factory
+
+#elabel
+    restorecon_recursive /elabel
+
+#private
+    chown root system /dev/block/by-name/private
+    chmod 0750 /dev/block/by-name/private
+
+#oemowninfo
+    chown root system /dev/block/by-name/oemowninfo
+    chmod 0750 /dev/block/by-name/oemowninfo
+
+on cali-start
+    class_start cali
+    
+    start vendor.audio-hal-2-0
+    start vendor.engpcclientlte
+    start vendor.modem_control
+    start vendor.refnotify
+    start console
+    start system_suspend
+
+#facsvc
+    start facsvc-hal-2-0

@@ -1,0 +1,7 @@
+on boot
+    chmod 660 /dev/sipa_down
+    chmod 660 /dev/sipa_up
+    chown system audio /dev/sipa_down
+    chown system audio /dev/sipa_up
+
+

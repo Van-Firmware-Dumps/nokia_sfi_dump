@@ -1,0 +1,12 @@
+on boot
+    chmod 666 /sys/hwinfo/hw_sku
+    chmod 666 /sys/hwinfo/board_id
+    start hwinfo-sh
+
+service hwinfo-sh /vendor/bin/hwinfo.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+

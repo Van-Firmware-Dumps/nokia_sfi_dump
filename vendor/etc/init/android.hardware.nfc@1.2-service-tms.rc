@@ -1,0 +1,11 @@
+on boot && property:ro.boot.product.hardware.sku=dsdsn
+    start nfc_hal_service.tms
+
+on boot && property:ro.boot.product.hardware.sku=ssn
+    start nfc_hal_service.tms
+
+service nfc_hal_service.tms /vendor/bin/hw/android.hardware.nfc@1.2-service-tms
+    class hal
+    user nfc
+    group nfc
+    disabled

@@ -1,0 +1,5 @@
+service hal_lockstatus  /vendor/bin/hw/vendor.oem.lockstatus.lockstatushidl@1.0-service
+    class hal
+    user root
+    group root system
+

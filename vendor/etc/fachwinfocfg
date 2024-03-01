@@ -1,0 +1,84 @@
+#hardware info configure for Sunfire HwInfoSprdS0609
+
+## Rules Description:
+## '*' is the separator between key and value(s).
+## '|' is the separator between multiple values.
+### Format for a single value : key* value
+### Format for multiple values: key* value1 | value2 | ...
+### NOTE:
+### 1. EMPTY or NULL value is all right;
+### 2. a space is suggested before and after the separator '|'.
+
+
+acc_sensor_mfr*
+adb_sn*/config/usb_gadget/g1/strings/0x409/serialnumber
+ambient_light_mfr*/sys/class/sprd_sensorhub/sensor_hub/light_info
+baro_sensor_mfr*
+battery_capacity*/sys/class/power_supply/battery/capacity
+battery_mfr*/sys/class/power_supply/battery/charger.0/vendor
+battery2_mfr*
+battery_voltage*/sys/class/power_supply/battery/voltage_now
+board_id*
+cam_back_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_back_lens_efuse
+cam_back_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_back_lens_mfr
+cam_back_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_back_lens_otp_status
+cam_depth_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_depth_lens_efuse
+cam_depth_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_depth_lens_mfr
+cam_depth_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_depth_lens_otp_status
+cam_front_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_front_lens_efuse
+cam_front_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_front_lens_mfr
+cam_front_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_front_lens_otp_status
+cam_iris_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_iris_lens_efuse
+cam_iris_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_iris_lens_mfr
+cam_iris_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_iris_lens_otp_status
+cam_macro_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_macro_lens_efuse
+cam_macro_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_macro_lens_mfr
+cam_macro_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_macro_lens_otp_status
+cam_tele_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_tele_lens_efuse
+cam_tele_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_tele_lens_mfr
+cam_tele_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_tele_lens_otp_status
+cam_tof_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_tof_lens_efuse
+cam_tof_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_tof_lens_mfr
+cam_tof_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_tof_lens_otp_status
+cam_wide_angle_lens_efuse*/data/vendor/cameraserver/hwinfo/cam_wide_angle_lens_efuse
+cam_wide_angle_lens_mfr*/data/vendor/cameraserver/hwinfo/cam_wide_angle_lens_mfr
+cam_wide_angle_lens_otp_status*/data/vendor/cameraserver/hwinfo/cam_wide_angle_lens_otp_status
+charger_ic_mfr*/sys/class/power_supply/charger/debug/vendor
+charger2_ic_mfr*
+cpu_type*
+cpu_id*/sys/class/misc/sprd_uid/uid
+factory_partition*/dev/block/by-name/factory
+fp_mfr*/sys/class/misc/focaltech_fp/fpsensor/fpsensor_info | /sys/devices/platform/fingerprint/chipone/chipone_info
+geo_sensor_mfr*
+gyro_sensor_mfr*
+g_sensor_mfr*/sys/class/sprd_sensorhub/sensor_hub/acc_info
+hw_sku*/sys/hwinfo/hw_sku
+hw_version*
+lcd_mfr*/sys/ontim_dev_debug/touch_screen/lcdvendor
+memory_capacity*/proc/meminfo
+memory_mfr*/sys/devices/platform/soc/soc:ap-apb/20200000.ufs/string_descriptors/ufs_info
+proximity_mfr*/sys/class/sprd_sensorhub/sensor_hub/prox_info
+nfc_mfr*/sys/ontim_dev_debug/tms_nfc/nfcvendor
+power_usb_type*/sys/class/power_supply/charger/usb_type
+quick_charge_type*/sys/class/power_supply/battery/usb_type
+receiver_cali_data*
+speaker_cali_data*
+speaker_mfr*/proc/asound/cards
+speaker_num*
+sar_sensor_mfr*/sys/bus/i2c/drivers/sar/3-0028/name
+sar_cali_ch_value*/sys/bus/i2c/drivers/sar/3-0028/sar/capacitance
+simcard_holder*/sys/hwinfo/CARD_HOLDER_PRESENT
+storage_mfr*/sys/devices/platform/soc/soc:ap-apb/20200000.ufs/string_descriptors/ufs_info
+storage_capacity*/sys/devices/platform/soc/soc:ap-apb/20200000.ufs/geometry_descriptor/ufs_capacity
+storage_cid*/sys/devices/platform/soc/soc:ap-apb/20200000.ufs/string_descriptors/ufs_cid
+storage_sn*/sys/devices/platform/soc/soc:ap-apb/20200000.ufs/string_descriptors/serial_number
+storage_life*
+storage_info*
+tp_mfr*/sys/ontim_dev_debug/touch_screen/vendor
+tp_capacity*/sys/chipone-tddi/test/factory_test | /proc/ilitek/mp_lcm_on_test
+typec_mfr*/sys/devices/platform/soc/soc:aon/64200000.spi/spi_master/spi4/spi4.0/64200000.spi:pmic@0:typec@380/typec_vendor
+type_cc_status*/sys/devices/platform/soc/soc:aon/64200000.spi/spi_master/spi4/spi4.0/64200000.spi:pmic@0:typec@380/typec_cc_polarity_role
+private_partition*/dev/block/by-name/private
+oemowninfo_partition*/dev/block/by-name/oemowninfo
+charge_ic_path*/sys/class/power_supply/battery/charger.0/stop_charge
+sar_write_str_path*/sys/bus/i2c/drivers/sar/3-0028/sar/cali

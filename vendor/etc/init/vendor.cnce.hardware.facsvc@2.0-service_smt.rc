@@ -1,0 +1,7 @@
+service facsvc-hal-2-0 /vendor/bin/hw/vendor.cnce.hardware.facsvc@2.0-service
+    class hal
+    user root
+    group root system cameraserver nfc bluetooth
+
+on property:odm.sys.faccmd=*
+    exec - root shell -- /system/bin/faccmd
