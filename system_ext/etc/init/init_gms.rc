@@ -1,0 +1,5 @@
+on property:gsm.client.base=*
+    setprop ro.com.google.clientidbase ${gsm.client.base}
+
+on property:gsm.sim.state=*
+    setprop persist.vendor.simstate ${gsm.sim.state}

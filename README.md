@@ -1,0 +1,20 @@
+## sunfire_Natv-user 12 SP1A.210812.016 42527 release-keys
+- Manufacturer: hmd global
+- Platform: ums9230
+- Codename: SFI
+- Brand: Nokia
+- Flavor: sunfire_Natv-user
+- Release Version: 12
+- Kernel Version: 5.4.210
+- Id: SP1A.210812.016
+- Incremental: 00WW_1_410
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: true
+- Treble Device: true
+- Locale: en-US
+- Screen Density: undefined
+- Fingerprint: Nokia/Sunfire_00WW/SFI:12/SP1A.210812.016/00WW_1_410:user/release-keys
+- OTA version: 
+- Branch: sunfire_Natv-user-12-SP1A.210812.016-42527-release-keys
+- Repo: nokia_sfi_dump

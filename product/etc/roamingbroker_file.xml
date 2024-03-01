@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roamingBrokerList>
+    <allowRoamingBroker original_mccmnc= "732360" roaming_mccmnc="302220"/>
+    <!-- 2022.10.14:huanglei SCP-5966 [ITA][TIM] Device not using MVNO APNs when roaming NW begin -->
+    <allowRoamingBroker original_mccmnc= "22207" roaming_mccmnc="22201"/>
+    <!-- 2022.10.14:huanglei SCP-5966 [ITA][TIM] Device not using MVNO APNs when roaming NW end -->
+</roamingBrokerList>

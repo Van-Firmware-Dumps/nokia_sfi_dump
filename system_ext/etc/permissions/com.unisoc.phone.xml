@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.unisoc.phone">
+        <!-- UNISOC: Add for BUG1882905 [hackerone] a unauthorized broadcast  @{ -->
+        <permission name="unisoc.permission.SYNC_SIM_CONTACTS"/>
+    </privapp-permissions>
+</permissions>

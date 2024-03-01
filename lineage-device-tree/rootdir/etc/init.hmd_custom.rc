@@ -1,0 +1,43 @@
+on early-boot
+    mount none /odm/empty /odm/600WW bind rec
+    mount none /odm/empty /odm/600EEA bind rec
+    mount none /odm/empty /odm/600CLA bind rec
+    mount none /odm/empty /odm/600ID bind rec
+    mount none /odm/empty /odm/600TEL bind rec
+    mount none /odm/empty /odm/600RU bind rec
+    mount none /odm/empty /odm/600FD bind rec
+    mount none /odm/empty /odm/600IN bind rec
+    umount /odm/${ro.boot.skuid}
+    mount none /odm/${ro.boot.skuid}/media /odm/media bind rec
+    mount none /odm/${ro.boot.skuid}/etc /odm/hmd_custom/etc bind rec
+    mount none /odm/${ro.boot.skuid}/app /odm/hmd_custom/app bind rec
+    mount none /odm/${ro.boot.skuid}/priv-app /odm/hmd_custom/priv-app bind rec
+    mount none /odm/${ro.boot.skuid}/overlay /odm/hmd_custom/overlay bind rec
+    mount none /odm/${ro.boot.skuid}/custometc /odm/custometc bind rec
+
+    mount none /product/empty /product/600WW bind rec
+    mount none /product/empty /product/600EEA bind rec
+    mount none /product/empty /product/600CLA bind rec
+    mount none /product/empty /product/600ID bind rec
+    mount none /product/empty /product/600TEL bind rec
+    mount none /product/empty /product/600RU bind rec
+    mount none /product/empty /product/600FD bind rec
+    mount none /product/empty /product/600IN bind rec
+    umount /product/${ro.boot.skuid}
+    mount none /product/${ro.boot.skuid}/media /product/media bind rec
+    mount none /product/${ro.boot.skuid}/etc /product/hmd_custom/etc bind rec
+    mount none /product/${ro.boot.skuid}/app /product/hmd_custom/app bind rec
+    mount none /product/${ro.boot.skuid}/priv-app /product/hmd_custom/priv-app bind rec
+    mount none /product/${ro.boot.skuid}/overlay /product/hmd_custom/overlay bind rec
+    mount none /product/${ro.boot.skuid}/custometc /product/custometc bind rec
+
+#add by mengpeng for MGK-863 : Enable App hibernation and customize the timeout
+service revoke /system/bin/init.hmd.revoke.sh
+    class late_start
+    user root
+    group root shell system
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start revoke
